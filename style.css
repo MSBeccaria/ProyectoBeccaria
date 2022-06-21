@@ -1,0 +1,440 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+/* familia tipográfica: Monteserrat Alternates light
+Códigos de colores ultilizados:
+azul #2C8AA0 - naranja #CE5C16 - natural #E6C693*/
+
+/* ESTRUCTURA GRID INDEX*/
+
+.gridConteinerIndex{
+    display:grid;
+    grid-template-areas: "header"
+                          "main"
+                          "footer";
+    grid-template-rows: 200px 600px 50px;
+    gap: 5px;  
+    align-items: center;                    
+                          
+}
+
+
+#header{
+    background-color: white;
+    height: 100 px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    margin: 20px;
+}
+
+#header .header__logo .header__menu{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header .header__menu ul{
+    display: flex;
+    list-style: none;
+    justify-content:flex-end;
+    margin: 0 10px;
+    padding: 10px;
+    
+}
+
+#header .header__menu ul li a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    margin: 30px;
+    font-size: larger;
+}
+
+#header .header__menu ul li a:hover{
+    color:#2C8AA0;
+    font-weight: bold;
+    
+}
+
+.MainInicio{
+    background-image: url(./assets/cuerdasInicio.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+
+.MainInicio .MainInicio__texto{
+    min-height: 500px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content:center;
+    align-items:flex-start;
+    padding-left: 5px;
+    font-size: 80px;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* APLICO MEDIAQUERIE EN INDEX PARA VISTA MOBILE*/
+
+@media(max-width:768px){
+    #header{
+        display:flex;
+    }
+
+    #header .header__menu ul{
+        display: flex;
+        flex-direction:column;
+        flex-wrap: nowrap;
+        justify-content:right;
+        align-items: flex-end;
+        align-content: flex-end;
+    }
+
+
+     .MainInicio .MainInicio__texto{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content:center;
+        align-items: flex-start;
+        font-size: 5vh;
+        color: beige;
+        font-weight: bold;
+    }
+
+    .MainInicio{
+        background-image: url(./assets/cuerdasInicio.jpg);
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position:center;
+    }    
+        
+
+    #footer{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       background-color:#CE5C16;
+       height: 80px;
+       width: 100%;
+       margin-top: 3px;
+    }
+}       
+/*HASTA ACÁ MEDIAQUERY INDEX-----------------------------------------*/
+
+
+/*SOBRE NOSOTRAS*/
+
+.gridConteinerNosotras{
+    display:grid;
+    grid-template-areas: "header"
+                          "main"
+                          "footer";
+    grid-template-rows: 200px 1070px 50px;
+    gap: 5px;  
+    align-items: center; 
+}      
+
+#mainNosotras{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 6px;
+    grid-row-gap: 9p;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+#mainNosotras .mainNosotras__foto1,
+#mainNosotras .mainNosotras__foto2{
+    width: 500px;
+}
+
+/* APLICO MEDIAQUERIE EN SOBRE NOSOTRAS PARA VISTA MOBILE*/
+
+@media(max-width:768px){
+    #header{
+        display:flex;
+    }
+
+    #header .header__menu ul{
+        display: flex;
+        flex-direction:column;
+        flex-wrap: nowrap;
+        justify-content:right;
+        align-items: flex-end;
+        align-content: flex-end;
+        margin-bottom: 10px;
+    }
+    .gridConteinerNosotras{
+        display:grid;
+        grid-template-areas: "header"
+                              "main"
+                              "footer";
+        grid-template-rows: 200px 800px 50px;
+        gap: 5px;  
+        align-items: center; 
+    }
+
+
+
+    #mainNosotras{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows:  200px 100px 200px 100px;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+
+    #mainNosotras .mainNosotras__foto1,
+    #mainNosotras .mainNosotras__foto2{
+         width:30%;
+    } 
+
+    #footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:#CE5C16;
+        height: 80px;
+        width: 100%;
+     }
+} 
+
+/*MUSICA*/
+
+.gridConteinerMusica{
+    display:grid;
+    grid-template-areas: "header"
+                          "main"
+                          "footer";
+    grid-template-rows: 200px 800px 50px;
+    gap: 5px;  
+    align-items: center; 
+}    
+
+#mainMusica{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 5px;
+        grid-row-gap: 20px;
+        align-items: center;
+        padding-left: 90px;
+
+}
+
+
+#mainMusica h1{
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/*APLICO MEDIAQUERIES EN MUSICA PARA VISTA MOBILE*/
+@media(max-width:768px){
+    #header{
+        display:flex;
+    }
+
+    #header .header__menu ul{
+        display: flex;
+        flex-direction:column;
+        flex-wrap: nowrap;
+        justify-content:right;
+        align-items: flex-end;
+        align-content: flex-end;
+        margin-bottom: 10px;
+    }
+
+    .gridConteinerMusica{
+        display:grid;
+        grid-template-areas: "header"
+                              "main"
+                              "footer";
+        grid-template-rows: 200px 800px 50px;
+        gap: 5px;  
+        align-items: center; 
+    }    
+
+    #footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:#CE5C16;
+        height: 80px;
+        width: 100%;
+     }
+}    
+
+
+
+/*AGENDA*/
+
+.gridConteinerAgenda{
+    display:grid;
+    grid-template-areas: "header"
+                          "main"
+                          "footer";
+    grid-template-rows: 200px 700px 50px;
+    gap: 5px;  
+    align-items: center; 
+}
+#mainAgenda{
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+#mainAgenda h1{
+    text-align: left;
+    margin-bottom: 20px;
+
+}
+
+.mainAgenda__cartelera{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:3fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.mainAgenda__cartelera .carteleraItem{
+    width: 300px;
+}
+
+.mainAgenda__cartelera .carteleraItem .btn{
+    width: 80px;
+}    
+
+/*APLICO MEDIAQUERIES EN AGENDA PARA VISTA MOBILE*/
+@media(max-width:768px){
+
+    .gridConteinerAgenda{
+        display:grid;
+        grid-template-areas: "header"
+                              "main"
+                              "footer";
+        grid-template-rows: 200px 1300px 50px;
+        gap: 5px;  
+        align-items: center; 
+    }
+    
+    .mainAgenda__cartelera{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    width: 40%;
+    height: auto;
+    flex-direction: column;
+    }
+
+    #footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:#CE5C16;
+        height: 80px;
+        width: 100%;
+     }
+}    
+
+
+/*CONTACTO*/
+.gridConteinerContacto{
+    display:grid;
+    grid-template-areas: "header"
+                          "main"
+                          "footer";
+    grid-template-rows: 200px 700px 50px;
+    gap: 5px;  
+    align-items: center; 
+}
+
+#mainContact{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 400px;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    padding-left: 90px;
+    padding-right: 90px;
+    gap:60px;
+    margin-bottom: 20px;
+}
+
+.mainContact__datos .p1{
+    font-size: large;
+} 
+
+.mainContact__datos .p2{
+    font-size: large;
+    color:#2C8AA0;
+} 
+
+.mainContact__form{
+    background-color:#E6C693;
+}
+
+/*APLICO MEDIAQUERIES EN CONTACTO PARA VISTA MOBILE*/
+@media(max-width:768px){
+
+    .gridConteinerContacto{
+        display:grid;
+        grid-template-areas: "header"
+                              "main"
+                              "footer";
+        grid-template-rows: 200px 500px 50px;
+        gap: 5px;  
+        align-items: center; 
+    }
+    
+    #mainContact{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+    }
+
+    .mainContact__form{
+        width: 80%;
+    }
+    
+}    
+
+   
+
+
+
+
+/*FOOTER---------------------------------------------------------------*/
+#footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#CE5C16;
+    height: 80px;
+    margin top: 10px;
+
+}
+
+#footer a{
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
