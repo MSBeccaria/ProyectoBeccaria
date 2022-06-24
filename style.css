@@ -70,6 +70,7 @@ azul #2C8AA0 - naranja #CE5C16 - natural #E6C693*/
     padding-left: 90px;
     padding-right: 90px;
 }
+
 @keyframes aparecer{
     0% {
         opacity: 0;
@@ -169,6 +170,19 @@ azul #2C8AA0 - naranja #CE5C16 - natural #E6C693*/
 #mainNosotras .mainNosotras__foto2{
     width: 500px;
 }
+
+.mainNosotras__foto1,
+.mainNosotras__foto2 {
+    transition: 2s;
+}
+
+.mainNosotras__foto1:hover{
+    filter: grayscale(100%);
+}
+.mainNosotras__foto2:hover{
+    filter: grayscale(100%);
+}
+
 
 /* APLICO MEDIAQUERIE EN SOBRE NOSOTRAS PARA VISTA MOBILE*/
 
