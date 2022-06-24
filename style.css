@@ -82,6 +82,13 @@ azul #2C8AA0 - naranja #CE5C16 - natural #E6C693*/
     font-size: 80px;
     color: white;
     font-weight: bold;
+
+}
+/* transformacion*/
+
+.MainInicio .MainInicio__texto p{
+    transform: translate(10px, 20px);
+    transition: 2s;
 }
 
 
