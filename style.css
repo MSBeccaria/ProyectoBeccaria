@@ -70,7 +70,14 @@ azul #2C8AA0 - naranja #CE5C16 - natural #E6C693*/
     padding-left: 90px;
     padding-right: 90px;
 }
-
+@keyframes aparecer{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 .MainInicio .MainInicio__texto{
     min-height: 500px;
@@ -82,6 +89,9 @@ azul #2C8AA0 - naranja #CE5C16 - natural #E6C693*/
     font-size: 80px;
     color: white;
     font-weight: bold;
+    animation-name: aparecer;
+    animation-duration: 5s;
+    animation-iteration-count:initial;
 }
 
 
