@@ -71,6 +71,16 @@ azul #2C8AA0 - naranja #CE5C16 - natural #E6C693*/
     padding-right: 90px;
 }
 
+/* transformacion*/
+
+@keyframes aparecer{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 .MainInicio .MainInicio__texto{
     min-height: 500px;
@@ -82,14 +92,12 @@ azul #2C8AA0 - naranja #CE5C16 - natural #E6C693*/
     font-size: 80px;
     color: white;
     font-weight: bold;
+    animation-name: aparecer;
+    animation-duration: 5s;
+    animation-iteration-count:initial;
 
 }
-/* transformacion*/
 
-.MainInicio .MainInicio__texto p{
-    transform: translate(10px, 20px);
-    transition: 2s;
-}
 
 
 /* APLICO MEDIAQUERIE EN INDEX PARA VISTA MOBILE*/
@@ -166,6 +174,19 @@ azul #2C8AA0 - naranja #CE5C16 - natural #E6C693*/
 #mainNosotras .mainNosotras__foto2{
     width: 500px;
 }
+
+.mainNosotras__foto1,
+.mainNosotras__foto2 {
+    transition: 2s;
+}
+
+.mainNosotras__foto1:hover{
+    filter: grayscale(100%);
+}
+.mainNosotras__foto2:hover{
+    filter: grayscale(100%);
+}
+
 
 /* APLICO MEDIAQUERIE EN SOBRE NOSOTRAS PARA VISTA MOBILE*/
 
